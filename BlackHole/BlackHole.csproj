@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net471</TargetFramework>
+		<LangVersion>10.0</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<PackAsTool>False</PackAsTool>
+		<Nullable>disable</Nullable>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<PackageId>BlackHole.Net.Lite</PackageId>
+		<Title>BlackHole.Net.Lite</Title>
+		<Version>4.1.1</Version>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>sqlite; orm; dotnet; framework; simple; windows; standard; services; desktop; database; mapper;</PackageTags>
+		<RepositoryUrl>https://github.com/Mikarsoft/BlackHole-Unity-ORM</RepositoryUrl>
+		<PackageIcon>bhunity.png</PackageIcon>
+		<AssemblyVersion>4.1.1</AssemblyVersion>
+		<FileVersion>4.1.1</FileVersion>
+		<Company>Mikarsoft Ltd</Company>
+		<PackageOutputPath>../nupkg</PackageOutputPath>
+		<Product>BlackHole.Net.Lite</Product>
+		<Authors>Michael Archolekas</Authors>
+		<Copyright>Copyright (c) 2023, Mikarsoft Ltd</Copyright>
+		<PackageProjectUrl>https://mikarsoft.com</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Description>A very Simple Lite Version of BlackHole.Core.ORM for .Net Framework 471, that uses only SqLite, for small windows applications and services.</Description>
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="System" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.Sqlite" Version="3.1.32" />
+		<PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" Version="2.1.6" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="bhunity.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Update="README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Remove="C:\Users\Archo\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.6\buildTransitive\net461\..\..\runtimes\win-x86\native\e_sqlite3.dll" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Remove="C:\Users\Archo\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.6\buildTransitive\net461\..\..\runtimes\win-x64\native\e_sqlite3.dll" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Remove="C:\Users\Archo\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.1.6\buildTransitive\net461\..\..\runtimes\win-arm\native\e_sqlite3.dll" />
+	</ItemGroup>
+</Project>
