@@ -11,6 +11,8 @@ namespace BlackHole.Configuration
             DatabaseStatics.DataPath = LogsPath;
             LoggerService.DeleteOldLogs();
             LoggerService.SetUpLogger();
+            SQLitePCL.Batteries_V2.Init();
+            SQLitePCL.raw.SetProvider(new SQLitePCL.SQLite3Provider_dynamic_cdecl());
         }
 
         internal static bool IsAutoUpdateOn()

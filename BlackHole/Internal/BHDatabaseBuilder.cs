@@ -16,7 +16,7 @@ namespace BlackHole.Internal
             {
                 if (File.Exists(databaseLocation))
                 {
-                    //SqliteConnection.ClearPool(new SqliteConnection(DatabaseStatics.ConnectionString));
+                    SqliteConnection.ClearPool(new SqliteConnection(DatabaseStatics.ConnectionString));
                     GC.Collect();
                     GC.WaitForPendingFinalizers();
                     File.Delete(databaseLocation);
